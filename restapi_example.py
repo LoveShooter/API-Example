@@ -137,7 +137,7 @@ def put(self, id):
     parser.add_argument("quote")
     params = parser.parse_args()
     for quote in ai_quotes:
-        if(id == quote[id]):
+        if(id == quote["id"]):
             quote["author"] = params["author"]
             quote["quote"] = params["quote"]
             return quote, 200
